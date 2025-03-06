@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var chevronRotate = 0.0
     
     var body: some View {
-        VStack {
+        VStack (alignment: .leading, spacing: 10) {
             HStack {
                 Button("", systemImage: "chevron.right") {
                     withAnimation {
@@ -35,7 +35,13 @@ struct ContentView: View {
             }
             
             if showDetails {
-                Text("blah")
+                Text("There are two primary types of animations in SwiftUI: explicit and implicit. Explicit are primarily done with `withAnimation`, while implicit are done with `animation()` *Emphasis*")
+            }
+            
+            HStack {
+                Text("more notes")
+                    .font(.headline)
+                Spacer()
             }
             
             Spacer()
